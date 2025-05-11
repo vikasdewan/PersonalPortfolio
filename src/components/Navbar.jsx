@@ -24,31 +24,37 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-        <p className="text-white text-[18px] font-bold cursor-pointer flex items-center">
-          Vikas &nbsp;<span className="sm:block hidden">Dewangan</span>
-        </p>
+          <p className="text-white text-[18px] font-bold cursor-pointer flex items-center">
+            Vikas &nbsp;<span className="sm:block hidden">Dewangan</span>
+          </p>
         </Link>
-       <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link)=>(
+        <ul className="list-none hidden sm:flex flex-row gap-10">
+          {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-gray-500"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick = {()=>{
+              onClick={() => {
                 setActive(link.title);
               }}
             >
               <Link to={`#${link.id}`}>{link.title}</Link>
             </li>
           ))}
-          <p 
-          onClick={() => {
-            window.open("https://drive.google.com/file/d/1HAnzHmD9-tC7LUO_SWOalmwINAWB0Bbi/view?usp=sharing");
-          }}
-          className="border-amber-500 border-2 bg-violet-500 h-8 justify-center w-20 items-center flex rounded-xl font-bold cursor-pointer"> Resume</p>
-       </ul>
-        
+          <p
+            onClick={() => {
+              window.open(
+                "https://drive.google.com/file/d/1HAnzHmD9-tC7LUO_SWOalmwINAWB0Bbi/view?usp=sharing"
+              );
+            }}
+            className="border-amber-500 border-2 bg-violet-500 h-8 justify-center w-20 items-center flex rounded-xl font-bold cursor-pointer"
+          >
+            {" "}
+            Resume
+          </p>
+        </ul>
+
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -59,7 +65,6 @@ const Navbar = () => {
             }}
           />
         </div>
-      
       </div>
     </nav>
   );
