@@ -1,0 +1,4 @@
+first setup reactJs by typing npm create vite@latest 
+then setup tailwind css by going to officia website.
+then  installed theses dependies npm install --legacy-peer @react-three/fiber @react-three/drei @react-three/maath react-tilt react-vertical-timeline-component @emailjs/browser framer-motion react-router-dom
+get the recommanded public and assest folder. and deleted the existed ones.
